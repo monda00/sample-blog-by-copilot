@@ -1,4 +1,4 @@
-# CONTRIBUTING.md
+# CONTRIBUTING
 
 Please follow these simple rules for consistency:
 
@@ -9,7 +9,7 @@ Please follow these simple rules for consistency:
 - Use [Conventional Commits](https://www.conventionalcommits.org/)
   - Format: `type: message` (e.g. `feat: add post detail page`)
 - Keep commits small and focused
-  - One logical change per commit.
+  - One logical change per commit
 
 ---
 
