@@ -1,4 +1,4 @@
-import { json, type MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import fs from "fs";
 import path from "path";
@@ -20,21 +20,14 @@ export const loader = async () => {
   return json(posts);
 };
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "My Blog - Home" },
-    { name: "description", content: "Welcome to My Blog!" },
-  ];
-};
-
-export default function Index() {
+export default function BlogIndex() {
   const posts = useLoaderData<typeof loader>();
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Latest Posts</h1>
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Blog</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
+        {posts.map(post => (
           <article key={post.slug} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
             <div className="p-6">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">

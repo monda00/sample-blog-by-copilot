@@ -10,6 +10,11 @@ export default function Header() {
         </Link>
         <ul className="flex space-x-4">
           <li>
+            <Link to="/blog" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Blog
+            </Link>
+          </li>
+          <li>
             <Link to="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               About
             </Link>
