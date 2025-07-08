@@ -1,31 +1,47 @@
 
 import { Link } from "@remix-run/react";
+import { blogConfig } from "../config";
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className="bg-white shadow-sm dark:bg-gray-800">
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white">
-          My Blog
-        </Link>
-        <ul className="flex space-x-4">
-          <li>
-            <Link to="/blog" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="bg-gray-900 text-white shadow-md">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <Link to="/" className="text-2xl font-bold">
+            {blogConfig.title}
+          </Link>
+          <nav>
+            <ul className="flex items-center space-x-6">
+              <li>
+                <Link
+                  to="/"
+                  className="hover:text-gray-300 transition-colors duration-300"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-gray-300 transition-colors duration-300"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-gray-300 transition-colors duration-300"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
