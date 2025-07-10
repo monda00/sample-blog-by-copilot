@@ -3,6 +3,7 @@ export const blogConfig = {
   description: "A blog about something awesome",
   author: {
     name: "Author Name",
+    email: "your.email@example.com",
     description: "A passionate software developer from Japan.",
   },
   socials: {

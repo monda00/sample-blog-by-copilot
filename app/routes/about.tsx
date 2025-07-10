@@ -10,23 +10,25 @@ export const meta: MetaFunction = () => {
 };
 
 export default function About() {
+  const logoSrc = "/logo-dark.png";
+
   return (
     <main className="container mx-auto px-4 py-16">
-      <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
+      <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 border border-gray-200 dark:border-gray-700">
         <div className="text-center">
           <img
-            src="/logo-dark.png"
+            src={logoSrc}
             alt="Author"
-            className="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200"
+            className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500 dark:border-blue-400"
           />
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight">
             {blogConfig.author.name}
           </h1>
-          <p className="mt-2 text-xl text-gray-600 dark:text-gray-300">
+          <p className="mt-3 text-xl text-gray-600 dark:text-gray-300">
             {blogConfig.title}
           </p>
         </div>
-        <div className="mt-12 text-lg text-gray-700 dark:text-gray-300 space-y-6">
+        <div className="mt-12 text-lg text-gray-700 dark:text-gray-300 space-y-6 leading-relaxed">
           <p>{blogConfig.author.description}</p>
           <p>
             Feel free to connect with me on social media. I&apos;m always open to
