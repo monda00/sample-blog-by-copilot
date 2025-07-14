@@ -1,6 +1,13 @@
 # Sample Blog by Copilot
 
-A sample blog application created by Copilot using Node.js, TypeScript, React, and Remix.
+A sample blog application built with the Remix framework, showcasing a modern web development stack.
+
+## Features
+
+- **Blog Posts:** Create and manage blog posts using Markdown.
+- **Responsive Design:** Styled with Tailwind CSS for a great experience on all devices.
+- **Code Quality:** Includes ESLint and Prettier for clean and consistent code.
+- **Type Safety:** Built with TypeScript to reduce errors in production.
 
 ## Tech Stack
 
@@ -13,19 +20,36 @@ A sample blog application created by Copilot using Node.js, TypeScript, React, a
 - **Prettier** - Code formatting
 - **Vite** - Build tool
 
-## Resources
+## Getting Started
 
-- 📖 [Remix docs](https://remix.run/docs)
+### Prerequisites
 
-## Development
+- [Node.js](https://nodejs.org/en/) (v18 or later)
+- [npm](https://www.npmjs.com/)
 
-Run the dev server:
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-username/sample-blog-by-copilot.git
+   cd sample-blog-by-copilot
+   ```
+
+2. Install the dependencies:
+   ```sh
+   npm install
+   ```
+
+### Development
+
+Run the development server:
 
 ```sh
 npm run dev
 ```
 
-The application will be available at http://localhost:5173/
+The application will be available at http://localhost:5173/.
 
 ## Code Quality
 
@@ -65,11 +89,24 @@ Now you'll need to pick a host to deploy it to.
 
 If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `npm run build`:
 
 - `build/server`
 - `build/client`
 
-## Styling
+## Coding and Naming Rules
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+### Coding Rules
+
+*   **Framework:** Use Remix-specific features and conventions (e.g., `loader` functions, `meta` exports, `@remix-run/react` hooks).
+*   **Styling:** Use Tailwind CSS for all styling.
+*   **Components:** Create functional components using arrow functions.
+*   **State Management:** Use the `useState` hook for component-level state.
+*   **File Structure:** Place reusable components in `app/components` and page-level components in `app/routes`.
+*   **Imports:** Use named imports for modules like `react` and `@remix-run/react`. Default imports are used for components.
+
+### Naming Rules
+
+*   **Components:** Use PascalCase for component names (e.g., `Header`, `Footer`).
+*   **Variables:** Use camelCase for variables and functions (e.g., `mobileMenuOpen`, `navLinks`).
+*   **Files:** Use PascalCase for component files (e.g., `Header.tsx`) and kebab-case for route files (e.g., `_index.tsx`, `about.tsx`).
